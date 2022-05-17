@@ -69,15 +69,13 @@
         }
       },
       "": {
-        "dataSource": "mainService",
-        "preload": true,
-        "settings": {
-          "synchronizationMode": "None",
-          "operationMode": "Server",
-          "autoExpandSelect": true,
-          "earlyRequests": true
-        }
-      }
+          "type": "sap.ui.model.json.JSONModel",
+          "uri": "data/customers.json"
+      },
+      "genderModel": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "data/gender.json"
+    }
     },
     "resources": {
       "css": [
