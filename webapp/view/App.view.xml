@@ -29,11 +29,20 @@
                     <Label id="_app_label_lastname" text="{i18n>lastname}" labelFor="_app_input_lastname"></Label>
                     <Input id="_app_input_lastname" value="{/lastname}"></Input>                      
                     <Label id="_app_label_gender" text="{i18n>gender}" labelFor="_app_select_gender"></Label>
+
                     <Select id="_app_select_gender" items="{genderModel>/genders}" selectedKey="{/gender}">
                         <items>
-                             <core:Item id="_app_selectitem_model" key="{genderModel>}" text="{genderModel>}"/>
+                             <core:Item id="_app_selectitem_model" key="{genderModel>}" text="{path: 'genderModel>', formatter: '.genderFormatter'}"/>
                         </items>
                     </Select>
+
+                <!--    
+                    <Select id="_app_select_gender" items="{genderModel>/genders}" selectedKey="{/gender}">
+                        <items>
+                             <core:Item id="_app_selectitem_model" key="{genderModel>}" text="{= ${genderModel>}==='female' ?${i18n>female} : ${i18n>male}}"/>
+                        </items>
+                    </Select>
+                 -->  
                     <!--  
                         <Select id="_app_select_gender">
                            <items>
