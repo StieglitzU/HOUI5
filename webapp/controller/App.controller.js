@@ -1,10 +1,11 @@
 sap.ui.define([
-    "sap/ui/core/mvc/Controller"
+    "sap/ui/core/mvc/Controller",
+    "sap/m/MessageBox"
 ],
     /**
      * @param {typeof sap.ui.core.mvc.Controller} Controller
      */
-    function (Controller) {
+    function (Controller, MessageBox) {
         "use strict";
 
         return Controller.extend("at.cloudna.zhoui505.controller.App", {
@@ -18,7 +19,13 @@ sap.ui.define([
                 let oResourceBundle = oI18nModel.getResourceBundle();
                 let sText = oResourceBundle.getText(sKey);
                 return sText;
-             }   
+             },
+             onSavePressed: function(){
+                 let oModel = this.getView().getModel();
+                 let oData = oModel.getData();
+                MessageBox.success(JSON.stringify(oData));
+              },
+             
 
         });
     });
