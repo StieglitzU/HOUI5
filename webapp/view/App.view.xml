@@ -1,0 +1,60 @@
+<mvc:View controllerName="at.cloudna.zhoui505.controller.App"
+    xmlns:f="sap.ui.layout.form" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core.item" displayBlock="true"
+    xmlns="sap.m">
+   <App id="app">
+    <Page id="page" title="{i18n>title}">
+        <content>
+		<f:SimpleForm id="SimpleFormChange354"
+			editable="true"
+			layout="ResponsiveGridLayout"
+			title="{i18n>title}"
+			labelSpanXL="3"
+			labelSpanL="3"
+			labelSpanM="3"
+			labelSpanS="12"
+			adjustLabelSpan="false"
+			emptySpanXL="4"
+			emptySpanL="4"
+			emptySpanM="4"
+			emptySpanS="0"
+			columnsXL="1"
+			columnsL="1"
+			columnsM="1"
+			singleContainerFullSize="false" >
+			<f:content>
+                    <Label id="_app_label_customerid" text="{i18n>customerid}" labelFor="_app_text_customerid"></Label>
+                    <Input id="_app_input_customerid" value="Customer12345"></Input>                      
+                    <Label id="_app_label_firstname" text="{i18n>firstname}" labelFor="_app_input_firstname"></Label>
+                    <Input id="_app_input_firstname" value="Uwe"></Input>                      
+                    <Label id="_app_label_lastname" text="{i18n>lastname}" labelFor="_app_input_lastname"></Label>
+                    <Input id="_app_input_lastname" value="Stieglitz"></Input>                      
+                 <!--
+                        <Label id="_app_label_gender" text="{i18n>gender}" labelFor="_app_select_gender"></Label>
+                        <Select id="_app_select_gender">
+                            <items>
+                                 <core:Item id="_app_selectitem_male" key="male" text="male"/>
+                                 <core:Item id="_app_selectitem_female" key="female" text="female"/>
+                             </items>
+                         </Select>
+                    -->
+                    <Label id="_app_label_title" text="{i18n>title}" labelFor="_app_input_title"></Label>
+                    <Input id="_app_input_title" value="Dr."></Input>                    <Label id="_app_label_mail" text="{i18n>mail}" labelFor="_app_input_mail"></Label>
+                    <Input id="_app_input_mail" value="uwe.stieglitz@gmail.com"></Input>                      
+                    <Label id="_app_label_phone" text="{i18n>phone}" labelFor="_app_input_phone"></Label>
+                    <Input id="_app_input_phone" value="+4915158922125"></Input>    
+                    <Label id="_app_label_homepage" text="{i18n>homepage}" labelFor="_app_input_homepage"></Label>
+                    <Input id="_app_input_homepage" value="www.uwestieglitz.de"></Input>
+			</f:content>
+		</f:SimpleForm>       
+            <!--
+                <HBox id="_app_hbox_customerid" >
+                <items>
+                    <Label id="_app_label_customerid" text="CustomerID" labelFor="_app_text_customerid"></Label>
+                    <Input id="_app_input_customerid" value="Customer12345"></Input>                
+                </items>
+             </HBox>
+             -->  
+        </content>
+    </Page>
+   </App>
+   </mvc:View>
