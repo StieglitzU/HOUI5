@@ -1,5 +1,5 @@
 <mvc:View controllerName="at.cloudna.zhoui505.controller.App"
-    xmlns:f="sap.ui.layout.form" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core.item" displayBlock="true"
+    xmlns:f="sap.ui.layout.form" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" displayBlock="true"
     xmlns="sap.m">
    <App id="app">
     <Page id="page" title="{i18n>title}">
@@ -28,7 +28,7 @@
                     <Input id="_app_input_firstname" value="Uwe"></Input>                      
                     <Label id="_app_label_lastname" text="{i18n>lastname}" labelFor="_app_input_lastname"></Label>
                     <Input id="_app_input_lastname" value="Stieglitz"></Input>                      
-                 <!--
+                 
                         <Label id="_app_label_gender" text="{i18n>gender}" labelFor="_app_select_gender"></Label>
                         <Select id="_app_select_gender">
                             <items>
@@ -36,7 +36,7 @@
                                  <core:Item id="_app_selectitem_female" key="female" text="female"/>
                              </items>
                          </Select>
-                    -->
+                    
                     <Label id="_app_label_title" text="{i18n>title}" labelFor="_app_input_title"></Label>
                     <Input id="_app_input_title" value="Dr."></Input>                    <Label id="_app_label_mail" text="{i18n>mail}" labelFor="_app_input_mail"></Label>
                     <Input id="_app_input_mail" value="uwe.stieglitz@gmail.com"></Input>                      
