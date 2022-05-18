@@ -2,19 +2,28 @@
     xmlns:f="sap.ui.layout.form" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" displayBlock="true"
     xmlns="sap.m">
    <App id="app">
-    <Page id="page" title="{i18n>title}">
-        <content>
+    <Page id="page">
+        <customHeader>
+            <OverflowToolbar>
+                <Title text="{i18n>appTitle}"/>
+                <ToolbarSpacer/>
+                <Button id="_app_button_header_edit" text="{i18n>edit}" type="Emphasized" icon="sap-icon://edit" press="onEditPressed" visible="{= !${editModel>/editmode}}"/>
+            </OverflowToolbar>
+        </customHeader>
+ <!--       <content>
             <core:Fragment id="customer_change_fragment" fragmentName="at.cloudna.zhoui505.view.fragment.changecustomer" type="XML"/>
         </content>
-    <footer>
+-->        
+<footer>
     <Bar>
-
         <contentRight>
-            <Button text="{i18n>safe}" type="Accept" icon="sap-icon://alert" press="onSavePressed"/>
-
+            <Button id="app_save_button" text="{i18n>save}" type="Accept"
+                icon="sap-icon://save" press="onSavePressed" visible="{editModel>/editmode}"/>
+            <Button id="app_cancel_button" text="{i18n>cancel}" type="Reject"
+                icon="sap-icon://cancel" press="onCancelPressed" visible="{editModel>/editmode}"/>
         </contentRight>
     </Bar>
-    </footer>        
+</footer>      
     </Page>
    </App>
    </mvc:View>

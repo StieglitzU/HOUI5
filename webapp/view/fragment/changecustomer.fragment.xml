@@ -3,7 +3,7 @@
 		<f:SimpleForm id="SimpleFormChange354"
 			editable="true"
 			layout="ResponsiveGridLayout"
-			title="{i18n>title}"
+			title="{i18n>appTitle}"
 			labelSpanXL="3"
 			labelSpanL="3"
 			labelSpanM="3"
