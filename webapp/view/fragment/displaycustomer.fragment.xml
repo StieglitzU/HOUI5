@@ -19,11 +19,11 @@
 			singleContainerFullSize="false" >
 			<f:content>
                     <Label id="_display_label_customerid" text="{i18n>customerid}" labelFor="_display_text_customerid"></Label>
-                    <Text id="_display_Text_customerid" text="{/customerid}"></Text>                      
+                    <Text id="_display_Text_customerid" text="{CustomerId}"></Text>                      
                     <Label id="_display_label_firstname" text="{i18n>firstname}" labelFor="_display_Text_firstname"></Label>
-                    <Text id="_display_Text_firstname" text="{/firstname}"></Text>                      
+                    <Text id="_display_Text_firstname" text="{Firstname}"></Text>                      
                     <Label id="_display_label_lastname" text="{i18n>lastname}" labelFor="_display_Text_lastname"></Label>
-                    <Text id="_display_Text_lastname" text="{/lastname}"></Text>                      
+                    <Text id="_display_Text_lastname" text="{Lastname}"></Text>                      
                     <Label id="_display_label_gender" text="{i18n>gender}" labelFor="_display_select_gender"></Label>
                     <Text id="_display_text_gender" text="{path: '/gender', formatter: '.genderFormatter'}"></Text>
                
@@ -45,12 +45,13 @@
                          </Select>
                      -->
                     <Label id="_display_label_title" text="{i18n>title}" labelFor="_display_Text_title"></Label>
-                    <Text id="_display_Text_title" text="{/title}"></Text>                    <Label id="_display_label_mail" text="{i18n>mail}" labelFor="_display_Text_mail"></Label>
-                    <Text id="_display_Text_mail" text="{/mail}"></Text>                      
+                    <Text id="_display_Text_title" text="{AcademicTitle}"></Text>                    
+                    <Label id="_display_label_mail" text="{i18n>mail}" labelFor="_display_Text_mail"></Label>
+                    <Text id="_display_Text_mail" text="{Email}"></Text>                      
                     <Label id="_display_label_phone" text="{i18n>phone}" labelFor="_display_Text_phone"></Label>
-                    <Text id="_display_Text_phone" text="{/phone}"></Text>    
-                    <Label id="_display_label_homepage" text="{i18n>homepage}" labelFor="_display_Text_homepage"></Label>
-                    <Text id="_display_Text_homepage" text="{/homepage}"></Text>
+                    <Text id="_display_Text_phone" text="{Phone}"></Text>    
+                    <Label id="_display_label_homepage" text="{i18n>website}" labelFor="_display_Text_homepage"></Label>
+                    <Text id="_display_Text_homepage" text="{Website}"></Text>
 			</f:content>
 		</f:SimpleForm>       
             <!--

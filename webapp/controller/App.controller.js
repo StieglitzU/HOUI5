@@ -14,66 +14,8 @@ sap.ui.define([
 
             _fragmentList : {}, 
 
-            onInit: function () {
-                    let oEditModel = new JSONModel({
-                        editmode: false}); 
+            onInit: function () {},
 
-            this.getView().setModel(oEditModel, "editModel");
-            this._showCustomerFragment("displaycustomer")
-        },
-
-
-            _showCustomerFragment: function(sFragmentName){
-                let oPage = this.getView().byId("page");
-            
-                oPage.removeAllContent();
-            
-                if(this._fragmentList[sFragmentName]){
-                    oPage.insertContent(this._fragmentList[sFragmentName]);
-                }else{
-                    Fragment.load({
-                        id: this.getView().createId(sFragmentName),
-                        name: "at.cloudna.zhoui505.view.fragment." + sFragmentName,
-                        controller: this
-                    }).then(function(oFragment){
-                        this._fragmentList[sFragmentName] = oFragment;
-                        oPage.insertContent(this._fragmentList[sFragmentName]);
-                    }.bind(this));
-                }
-            },            
-
-
-             genderFormatter:function(sKey){
-                 let oView = this.getView();
-                 let oI18nModel = oView.getModel("i18n");
-                let oResourceBundle = oI18nModel.getResourceBundle();
-                let sText = oResourceBundle.getText(sKey);
-                return sText;
-             },
-             onEditPressed: function(){
-                this._toggleEdit(true);
-            },
-            
-            _toggleEdit: function(bEditMode){
-                let oEditModel = this.getView().getModel("editModel");
-            
-                oEditModel.setProperty("/editmode", bEditMode);
-            
-                this._showCustomerFragment(bEditMode ? "changecustomer" : "displaycustomer");
-            },
-            
-            onSavePressed: function(){
-                let oModel = this.getView().getModel();
-                let oData = oModel.getData();
-                MessageBox.success(JSON.stringify(oData));
-            
-                this._toggleEdit(false);
-            },
-            
-            onCancelPressed: function(){
-                this._toggleEdit(false);
-            },
-             
 
         });
     });

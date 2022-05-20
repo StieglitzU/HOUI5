@@ -14,14 +14,13 @@
       "id": "@sap-ux/fiori-freestyle-writer:basic",
       "version": "0.11.9"
     },
-    "dataSources": {
-      "mainService": {
-        "uri": "/sap/opu/odata/",
+"dataSources": {
+      "ZHOUI5_CUSTOMER_SRV": {
+        "uri": "/sap/opu/odata/sap/ZHOUI5_CUSTOMER_SRV/",
         "type": "OData",
         "settings": {
-          "annotations": [],
-          "localUri": "localService/metadata.xml",
-          "odataVersion": "4.0"
+          "odataVersion": "2.0",
+          "localUri": "localService/metadata.xml"
         }
       }
     }
@@ -60,8 +59,7 @@
     "contentDensities": {
       "compact": true,
       "cozy": true
-    },    
-
+    },
     "models": {
       "i18n": {
         "type": "sap.ui.model.resource.ResourceModel",
@@ -70,13 +68,20 @@
         }
       },
       "": {
-          "type": "sap.ui.model.json.JSONModel",
-          "uri": "data/customers.json"
+        "dataSource": "ZHOUI5_CUSTOMER_SRV",
+        "preload": true,
+        "settings": {
+          "defaultBindingMode": "TwoWay",
+          "defaultCountMode": "Inline",
+          "refreshAfterChange": true,
+          "useBatch": true,
+          "tokenHandling": true
+        }
       },
       "genderModel": {
         "type": "sap.ui.model.json.JSONModel",
         "uri": "data/gender.json"
-    }
+      }
     },
     "resources": {
       "css": [
@@ -102,7 +107,30 @@
           "target": [
             "TargetApp"
           ]
+        },
+        {
+          "name": "Customer",
+          "pattern": "customer/{path}",
+          "target": [
+            "customer"
+          ]
+        },
+        {
+          "name": "Main",
+          "pattern": "",
+          "target": [
+            "main"
+          ]
+        },
+
+        {
+            "name": "CreateCustomer",
+            "pattern": "createcustomer",
+            "target": [
+                "customer"
+            ]
         }
+        
       ],
       "targets": {
         "TargetApp": {
@@ -111,6 +139,20 @@
           "clearControlAggregation": false,
           "viewId": "App",
           "viewName": "App"
+        },
+        "customer": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "customer",
+          "viewName": "customer"
+        },
+        "main": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "main",
+          "viewName": "main"
         }
       }
     },

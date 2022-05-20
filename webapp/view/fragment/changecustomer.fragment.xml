@@ -19,11 +19,11 @@
 			singleContainerFullSize="false" >
 			<f:content>
                     <Label id="_edit_label_customerid" text="{i18n>customerid}" labelFor="_edit_text_customerid"></Label>
-                    <Input id="_edit_input_customerid" value="{/customerid}"></Input>                      
+                    <Input id="_edit_input_customerid" value="{Customerid}"></Input>                      
                     <Label id="_edit_label_firstname" text="{i18n>firstname}" labelFor="_edit_input_firstname"></Label>
-                    <Input id="_edit_input_firstname" value="{/firstname}"></Input>                      
+                    <Input id="_edit_input_firstname" value="{Firstname}"></Input>                      
                     <Label id="_edit_label_lastname" text="{i18n>lastname}" labelFor="_edit_input_lastname"></Label>
-                    <Input id="_edit_input_lastname" value="{/lastname}"></Input>                      
+                    <Input id="_edit_input_lastname" value="{Lastname}"></Input>                      
                     <Label id="_edit_label_gender" text="{i18n>gender}" labelFor="_edit_select_gender"></Label>
 
                     <Select id="_edit_select_gender" items="{genderModel>/genders}" selectedKey="{/gender}">
@@ -49,12 +49,13 @@
                          </Select>
                      -->
                     <Label id="_edit_label_title" text="{i18n>title}" labelFor="_edit_input_title"></Label>
-                    <Input id="_edit_input_title" value="{/title}"></Input>                    <Label id="_edit_label_mail" text="{i18n>mail}" labelFor="_edit_input_mail"></Label>
-                    <Input id="_edit_input_mail" value="{/mail}"></Input>                      
+                    <Input id="_edit_input_title" value="{Academictitle}"></Input>                    
+                    <Label id="_edit_label_mail" text="{i18n>mail}" labelFor="_edit_input_mail"></Label>
+                    <Input id="_edit_input_mail" value="{Mail}"></Input>                      
                     <Label id="_edit_label_phone" text="{i18n>phone}" labelFor="_edit_input_phone"></Label>
-                    <Input id="_edit_input_phone" value="{/phone}"></Input>    
-                    <Label id="_edit_label_homepage" text="{i18n>homepage}" labelFor="_edit_input_homepage"></Label>
-                    <Input id="_edit_input_homepage" value="{/homepage}"></Input>
+                    <Input id="_edit_input_phone" value="{Phone}"></Input>    
+                    <Label id="_edit_label_homepage" text="{i18n>website}" labelFor="_edit_input_homepage"></Label>
+                    <Input id="_edit_input_homepage" value="{Website}"></Input>
 			</f:content>
 		</f:SimpleForm>       
             <!--

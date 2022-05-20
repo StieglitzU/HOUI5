@@ -1,10 +1,34 @@
 {
+"customers": [
+{
 "customerid": "1234paul",
 "firstname": "Paul",
 "lastname": "Kinzer",
 "mail": "paul@gmail.com",
 "phone": "060-123456",
-"homepage": "www.paul.de",
+"website": "www.paul.de",
 "title": "Prof. Dr.",
 "gender": "male"
+},
+{
+"customerid": "1234Laura",
+"firstname": "Laura",
+"lastname": "Stieglitz",
+"mail": "laura@gmail.com",
+"phone": "060-asdfg",
+"website": "www.laura.de",
+"title": "Magister",
+"gender": "female"
+},
+{
+"customerid": "1234Kathrin",
+"firstname": "Kathrin",
+"lastname": "Kinzer",
+"mail": "kathrin@gmail.com",
+"phone": "060-hjklöä",
+"website": "www.kathrin.de",
+"title": "Dr.",
+"gender": "male"
+}
+]
 }
